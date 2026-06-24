@@ -1,8 +1,17 @@
+import Image from 'next/image';
+
 export default function Nav() {
   return (
     <nav>
       <a href="#" className="nav-logo">
-        <div className="nav-logo-icon">🌿</div>
+        <Image
+          src="/logo.png"
+          alt="EcoLoop"
+          width={36}
+          height={36}
+          className="nav-logo-img"
+          priority
+        />
         <span className="nav-logo-text">
           Eco<span>Loop</span>
         </span>
