@@ -5,6 +5,7 @@ import HowItWorks from '@/components/HowItWorks';
 import Gamification from '@/components/Gamification';
 import Pricing from '@/components/Pricing';
 import CTA from '@/components/CTA';
+import Waitlist from '@/components/Waitlist';
 import Footer from '@/components/Footer';
 
 export default function Home() {
@@ -17,6 +18,7 @@ export default function Home() {
       <Gamification />
       <Pricing />
       <CTA />
+      <Waitlist />
       <Footer />
     </>
   );
