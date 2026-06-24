@@ -1,7 +1,10 @@
 import { Timestamp } from 'firebase-admin/firestore';
 import { NextRequest, NextResponse } from 'next/server';
 
-import { adminDb } from '@/lib/firebase-admin';
+import { getAdminDb } from '@/lib/firebase-admin';
+
+// Never statically render this route — it reads env vars and writes to Firestore at runtime.
+export const dynamic = 'force-dynamic';
 
 export async function POST(req: NextRequest) {
   try {
@@ -18,7 +21,7 @@ export async function POST(req: NextRequest) {
     const normalised = email.toLowerCase().trim();
     const userAgent = req.headers.get('user-agent') ?? '';
 
-    await adminDb.collection('waitlist').doc(normalised).set({
+    await getAdminDb().collection('waitlist').doc(normalised).set({
       email: normalised,
       createdAt: Timestamp.now(),
       source: 'landing-page',
