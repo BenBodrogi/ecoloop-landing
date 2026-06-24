@@ -20,13 +20,13 @@ export default function HowItWorks() {
   return (
     <section>
       <div className="hiw">
-        <div className="center">
+        <div className="center" data-animate>
           <div className="sec-lbl">Simple by design</div>
           <h2 className="sec-title">Up and running in 3 minutes.</h2>
         </div>
         <div className="hiw-steps">
-          {steps.map((s) => (
-            <div key={s.n} className="hiw-step">
+          {steps.map((s, i) => (
+            <div key={s.n} className="hiw-step" data-animate data-delay={`${i * 130}`}>
               <div className="hiw-num">{s.n}</div>
               <h3>{s.title}</h3>
               <p>{s.desc}</p>

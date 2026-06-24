@@ -3,7 +3,7 @@ export default function Gamification() {
     <section>
       <div className="game-grid">
         {/* Visual cards column */}
-        <div>
+        <div data-animate="left">
           <div className="g-card">
             <div className="g-lbl">Your badges</div>
             <div className="badges">
@@ -19,7 +19,7 @@ export default function Gamification() {
                 <span>Level 7 — Eco Hero</span>
                 <span>680 / 1000 XP</span>
               </div>
-              <div className="xp-track">
+              <div className="xp-track" data-animate="xp">
                 <div className="xp-fill" />
               </div>
             </div>
@@ -58,7 +58,7 @@ export default function Gamification() {
         </div>
 
         {/* Text column */}
-        <div>
+        <div data-animate="right" data-delay="120">
           <div className="sec-lbl">Gamified sustainability</div>
           <h2 className="sec-title">Staying green has never been this fun.</h2>
           <p className="sec-sub" style={{ marginBottom: 0 }}>

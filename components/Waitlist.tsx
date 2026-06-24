@@ -39,7 +39,7 @@ export default function Waitlist() {
 
   return (
     <section className="waitlist">
-      <div className="waitlist-box">
+      <div className="waitlist-box" data-animate>
         <div className="sec-lbl" style={{ textAlign: 'center' }}>Join the waitlist</div>
         <h2 className="waitlist-title">
           Be the first to know<br />when we launch.

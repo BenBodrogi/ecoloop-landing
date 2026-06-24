@@ -12,7 +12,7 @@ const PlayIcon = () => (
 
 export default function CTA() {
   return (
-    <div className="cta">
+    <div className="cta" data-animate>
       <h2>
         Your planet needs you.<br />
         Your phone can help.

@@ -55,7 +55,7 @@ const plans = [
 export default function Pricing() {
   return (
     <section>
-      <div className="center">
+      <div className="center" data-animate>
         <div className="sec-lbl">Transparent pricing</div>
         <h2 className="sec-title">Start free. Go premium when you&apos;re ready.</h2>
         <p className="sec-sub">
@@ -63,8 +63,8 @@ export default function Pricing() {
         </p>
       </div>
       <div className="price-grid">
-        {plans.map((plan) => (
-          <div key={plan.name} className={`price-card${plan.best ? ' best' : ''}`}>
+        {plans.map((plan, i) => (
+          <div key={plan.name} className={`price-card${plan.best ? ' best' : ''}`} data-animate data-delay={`${i * 100}`}>
             {plan.best && <div className="price-best-tag">Most Popular</div>}
             <div className="price-name">{plan.name}</div>
             <div className="price-amt">

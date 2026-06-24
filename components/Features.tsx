@@ -10,14 +10,14 @@ const features = [
 export default function Features() {
   return (
     <section>
-      <div className="sec-lbl">Track everything that matters</div>
-      <h2 className="sec-title">Every CO₂ source, covered.</h2>
-      <p className="sec-sub">
+      <div className="sec-lbl" data-animate>Track everything that matters</div>
+      <h2 className="sec-title" data-animate data-delay="100">Every CO₂ source, covered.</h2>
+      <p className="sec-sub" data-animate data-delay="180">
         Log your activities in seconds across the four areas that make up most of your personal carbon footprint.
       </p>
       <div className="feat-grid">
-        {features.map((f) => (
-          <div key={f.title} className="feat-card">
+        {features.map((f, i) => (
+          <div key={f.title} className="feat-card" data-animate data-delay={`${i * 80}`}>
             <div className={`feat-icon ${f.color}`}>{f.icon}</div>
             <h3>{f.title}</h3>
             <p>{f.desc}</p>
